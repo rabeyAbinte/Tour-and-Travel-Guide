@@ -1,0 +1,91 @@
+{
+  "coxsbazar": {
+    "name": "Cox's Bazar",
+    "info": "World's longest natural sea beach in Bangladesh.",
+    "cost": "15,000৳ - 20,000৳",
+    "images": [
+      "img/cox2.png",
+      "img/cox3.png",
+      "img/cox/cox1.jpg",
+      "img/cox/cox2.jpg",
+      "img/cox/cox3.jpg",
+      "img/cox/cox5.jpg"
+    ]
+  },
+
+  "sylhet": {
+    "name": "Sylhet",
+    "info": "Sylhet is known for its tea plantations and natural scenery.<br> The region has been inhabited since ancient times, and since the city's establishment in the 14th century.",
+    "cost": "8000৳ - 10,000৳",
+    "images": [
+      "img/sylhet2.png",
+      "img/sylhet3.png",
+      "img/shylet/shulet (1).jpg",
+      "img/shylet/shulet (2).jpg",
+      "img/shylet/shulet (3).jpg",
+      "img/shylet/shulet (4).jpg"
+    ]
+  },
+
+  "sajek": {
+    "name": "Sajek",
+    "info": "Queen of Hills with clouds and mountains.",
+    "cost": "10,000৳ - 14,000৳",
+    "images": [
+      "img/sajek2.png",
+      "img/sajek3.png",
+      "img/sajek/sajek (1).jpg",
+      "img/sajek/sajek (2).jpg",
+      "img/sajek/sajek (3).jpg",
+      "img/sajek/sajek (4).jpg"
+    ]
+  },
+
+  "bandarban": {
+    "name": "Bandarban",
+    "info": "Hill district famous for Nilgiri and Boga Lake.",
+    "cost": "12,000৳ - 18,000৳",
+    "images": [
+      "img/bandor3.png",
+      "img/bandor2.png"
+    ]
+  },
+
+  "kuakata": {
+    "name": "Kuakata",
+    "info": "Rare beach where sunrise and sunset are both visible.",
+    "cost": "8,000৳ - 12,000৳",
+    "images": [
+      "img/kuakata2.png",
+      "img/kuakata3.png"
+    ]
+  },
+
+  "saintmartin": {
+    "name": "Saint Martin",
+    "info": "Only coral island of Bangladesh.",
+    "cost": "18,000৳ - 25,000৳",
+    "images": [
+      "img/saint2.png",
+      "img/saint3.png"
+    ]
+  },
+    "Tanguar": {
+    "name": "Tanguar Hawr",
+    "info": "Only coral island of Bangladesh.",
+    "cost": "7000৳ - 10,000৳",
+    "images": [
+      "img/tanguar2.png",
+      "img/tanguar3.png"
+    ]
+  },
+  "srimangal": {
+    "name": "Srimangal",
+    "info": "Only coral island of Bangladesh.",
+    "cost": "5000৳ - 7000৳",
+    "images": [
+      "img/srimongol2.jpg",
+      "img/srimongol3.jpg"
+    ]
+  }
+}

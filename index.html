@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour & Travel Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <ul class="nav-left">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#places">Places</a></li>
+    <li><a href="#hotels">Hotels</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="reg.html">Registration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Logo">
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero-text">
+  <h1>Explore Beautiful Bangladesh</h1>
+  <p>Your complete Tour & Travel Guide</p>
+</section>
+
+<!-- ===== PLACES ===== -->
+<h2 class="section-title" id="places">POPULAR PLACES</h2>
+
+<div class="grid">
+  <div class="card" onclick="openPlace('coxsbazar')">
+    <img src="img/cox1.jpg.png">
+    <h3>Cox's Bazar</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Coxs Bazar')">
+      Book Now
+    </button>
+  </div>
+
+  <div class="card" onclick="openPlace('sylhet')">
+    <img src="img/sylhet1.jpg">
+    <h3>Sylhet</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Sylhet')">
+      Book Now
+    </button>
+  </div>
+
+  <div class="card" onclick="openPlace('sajek')">
+    <img src="img/hajek1.png">
+    <h3>Sajek Valley</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Sajek Valley')">
+      Book Now
+    </button>
+  </div>
+
+  <div class="card" onclick="openPlace('bandarban')">
+    <img src="img/bandarban1.png">
+    <h3>Bandarban</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Bandarban')">
+      Book Now
+    </button>
+  </div>
+
+  <div class="card" onclick="openPlace('kuakata')">
+    <img src="img/kuakata1.jpg">
+    <h3>Kuakata</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Kuakata')">
+      Book Now
+    </button>
+  </div>
+
+  <div class="card" onclick="openPlace('saintmartin')">
+    <img src="img/saintmartin1.png">
+    <h3>Saint Martin</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Saint Martin')">
+      Book Now
+    </button>
+  </div>
+
+  <div class="card" onclick="openPlace('tanguar')">
+    <img src="img/tanguar1.png">
+    <h3>Tanguar Haor</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Tanguar Haor')">
+      Book Now
+    </button>
+  </div>
+
+  <div class="card" onclick="openPlace('srimangal')">
+    <img src="img/srimongol.png">
+    <h3>Srimangal</h3>
+    <button class="book-btn"
+      onclick="event.stopPropagation(); openBooking('Srimangal')">
+      Book Now
+    </button>
+  </div>
+</div>
+
+<!-- ===== HOTELS ===== -->
+<h2 class="section-title" id="hotels">POPULAR HOTELS</h2>
+
+<div class="grid">
+  <div class="card">
+    <img src="img/seaview.png">
+    <h3>Hotel Sea View</h3>
+    <p>3000৳ / night</p>
+    <button class="book-btn" onclick="openHotelBooking('Hotel Sea View')">
+      Book Now
+    </button>
+    <div class="stars">⭐⭐⭐⭐☆</div>
+
+  </div>
+
+  <div class="card">
+    <img src="img/paradise.jpeg">
+    <h3>Hotel Paradise</h3>
+    <p>4500৳ / night</p>
+    <button class="book-btn" onclick="openHotelBooking('Hotel Paradise')">
+      Book Now
+    </button>
+    <div class="stars">⭐⭐⭐⭐☆</div>
+  </div>
+
+  <div class="card">
+    <img src="img/ocean.jpg">
+    <h3>Hotel Ocean Crown</h3>
+    <p>5000৳ / night</p>
+    <button class="book-btn" onclick="openHotelBooking('Hotel Ocean Crown')">
+      Book Now
+    </button>
+    <div class="stars">⭐⭐⭐⭐☆</div>
+  </div>
+
+  <div class="card">
+    <img src="img/long.jpg">
+    <h3>Hotel Long Beach</h3>
+    <p>6500৳ / night</p>
+    <button class="book-btn" onclick="openHotelBooking('Hotel Long Beach')">
+      Book Now
+    </button>
+    <div class="stars">⭐⭐⭐⭐☆</div>
+  </div>
+
+  <div class="card">
+    <img src="img/niligiri.jpg">
+    <h3>Nilgiri Resort</h3>
+    <p>4000৳ / night</p>
+    <button class="book-btn" onclick="openHotelBooking('Nilgiri Resort')">
+      Book Now
+    </button>
+    <div class="stars">⭐⭐⭐⭐☆</div>
+  </div>
+
+  <div class="card">
+    <img src="img/grand.jpg">
+    <h3>Kuakata Grand Hotel</h3>
+    <p>3500৳ / night</p>
+    <button class="book-btn" onclick="openHotelBooking('Kuakata Grand Hotel')">
+      Book Now
+    </button>
+    <div class="stars">⭐⭐⭐⭐☆</div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h3>About Us</h3>
+      <p>We provide complete tour & travel guidance across Bangladesh.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="#hotels">Hotels</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>Email: zubaerrahmanapple@gmail.com</p>
+      <p>Phone: +880 1315894133</p>
+      <p>Phone: +880 1580678828</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Tour & Travel Guide. All rights reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

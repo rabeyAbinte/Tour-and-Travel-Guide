@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<nav class="navbar">
+  <ul class="nav-left">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#places">Places</a></li>
+    <li><a href="#hotels">Hotels</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Registration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Logo">
+  </div>
+</nav>
+
+<body>
+<div class="form">
+  <h2>Login</h2>
+
+  <input type="text" id="username" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+  <p>New user? <a href="reg.html">Register</a></p>
+</div>
+
+<script>
+async function login() {
+  const email = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch("http://localhost:5000/auth/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
+
+  const data = await res.json();
+  if (data.token) {
+    alert("✅ Login successful!");
+    localStorage.setItem("token", data.token);
+    window.location.href = "index.html";
+  } else {
+    alert("❌ " + data.message);
+  }
+}
+</script>
+</body>
+</html>

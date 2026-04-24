@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Place Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<nav class="navbar">
+  <ul class="nav-left">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#places">Places</a></li>
+    <li><a href="#hotels">Hotels</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Registration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Logo">
+  </div>
+</nav>
+
+
+
+<body>
+
+<div id="placeDetails" class="details"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const place = params.get("place");
+
+fetch("data.json")
+.then(res => res.json())
+.then(data => {
+  const p = data[place];
+
+  document.getElementById("placeDetails").innerHTML = `
+    <h1>${p.name}</h1>
+    <p>${p.info}</p>
+    <h3>Estimated Cost: ${p.cost}</h3>
+
+    <div class="grid">
+      ${p.images.map(img => `<img src="${img}" class="detail-img">`).join("")}
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

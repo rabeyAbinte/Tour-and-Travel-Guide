@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<nav class="navbar">
+  <ul class="nav-left">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#places">Places</a></li>
+    <li><a href="#hotels">Hotels</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="reg.html">Registration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+</nav>
+
+<body>
+<div class="form">
+  <h2>Register</h2>
+
+  <input type="text" id="regUsername" placeholder="Username">
+  <input type="email" id="regEmail" placeholder="Email">
+  <input type="password" id="regPassword" placeholder="Password">
+
+  <button onclick="register()">Register</button>
+
+  <p>Already have account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+async function register() {
+  const username = document.getElementById("regUsername").value;
+  const email = document.getElementById("regEmail").value;
+  const password = document.getElementById("regPassword").value;
+
+  const res = await fetch("http://localhost:5000/auth/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, email, password })
+  });
+
+  const data = await res.json();
+  alert(data.message || "Registered!");
+}
+</script>
+</body>
+</html>

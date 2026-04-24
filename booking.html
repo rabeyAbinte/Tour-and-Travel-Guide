@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<nav class="navbar">
+  <ul class="nav-left">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#places">Places</a></li>
+    <li><a href="#hotels">Hotels</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="reg.html">Registration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Logo">
+  </div>
+</nav>
+
+<body>
+<section class="booking-section">
+  <h1 id="bookingTitle">Book Your Tour</h1>
+ <form class="booking-form">
+  <input type="text" id="placeInput" name="place" readonly>
+  <input type="text" id="hotelInput" name="hotel" readonly>
+
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="date" required>
+  <input type="number" placeholder="Persons" required>
+
+  <button type="submit">Confirm Booking</button>
+</form>
+</section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const place = params.get("place");
+const hotel = params.get("hotel");
+
+const placeInput = document.getElementById("placeInput");
+const hotelInput = document.getElementById("hotelInput");
+const title = document.getElementById("bookingTitle");
+
+placeInput.style.display = "none";
+hotelInput.style.display = "none";
+
+if (place) {
+  title.innerText = "Book Your Tour";
+  placeInput.value = place;
+  placeInput.style.display = "block";
+}
+if (hotel) {
+  title.innerText = "Book Your Hotel";
+  hotelInput.value = hotel;
+  hotelInput.style.display = "block";
+}
+
+const form = document.querySelector(".booking-form");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const bookingData = {
+    name: form.querySelector('input[placeholder="Your Name"]').value,
+    email: form.querySelector('input[placeholder="Email"]').value,
+    date: form.querySelector('input[type="date"]').value,
+    persons: form.querySelector('input[placeholder="Persons"]').value,
+    place: placeInput.value || null,
+    hotel: hotelInput.value || null
+  };
+
+  const res = await fetch("http://localhost:5000/bookings", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(bookingData)
+  });
+
+  const data = await res.json();
+  alert(data.message);
+});
+</script>
+</body>
+</html>
